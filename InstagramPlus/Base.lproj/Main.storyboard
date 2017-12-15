@@ -110,13 +110,6 @@
                                     <action selector="onTapLogoutButton:" destination="Jh6-5K-jw7" eventType="touchUpInside" id="gIP-Uh-gev"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="logged in!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xh4-lk-lyG">
-                                <rect key="frame" x="149" y="240" width="76" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="YEX-c7-Eli"/>
@@ -140,7 +133,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iBb-n6-Rty">
-                                <rect key="frame" x="0.0" y="105" width="375" height="280.5"/>
+                                <rect key="frame" x="0.0" y="105" width="375" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="1mE-zC-48A"/>
                                     <constraint firstAttribute="height" constant="280" id="81r-uz-iN0"/>
@@ -392,47 +385,47 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enK-WS-apS">
-                                                    <rect key="frame" x="16" y="330" width="30" height="30"/>
+                                                    <rect key="frame" x="16" y="330.5" width="30" height="30"/>
                                                     <state key="normal" title="&lt;3"/>
                                                     <connections>
                                                         <action selector="onTapLikeButton:" destination="oha-pp-vQJ" eventType="touchUpInside" id="94R-qX-HaX"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDA-xa-yVY">
-                                                    <rect key="frame" x="54" y="330" width="39" height="30"/>
+                                                    <rect key="frame" x="54" y="330.5" width="39" height="30"/>
                                                     <state key="normal" title="(   )。"/>
                                                     <connections>
                                                         <action selector="onTapCommentButton:" destination="oha-pp-vQJ" eventType="touchUpInside" id="mtZ-f5-ygg"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x81-sv-pTp">
-                                                    <rect key="frame" x="337" y="330" width="30" height="30"/>
+                                                    <rect key="frame" x="337" y="330.5" width="30" height="30"/>
                                                     <state key="normal" title="|V|"/>
                                                     <connections>
                                                         <action selector="onTapBookmarkButton:" destination="oha-pp-vQJ" eventType="touchUpInside" id="PwP-hx-rJ6"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="39 likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAh-q6-eM9">
-                                                    <rect key="frame" x="16" y="367.5" width="51" height="16"/>
+                                                    <rect key="frame" x="16" y="368" width="51" height="16"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97o-zJ-EHX">
-                                                    <rect key="frame" x="89" y="330" width="30" height="30"/>
+                                                    <rect key="frame" x="89" y="330.5" width="30" height="30"/>
                                                     <state key="normal" title="^&gt;"/>
                                                     <connections>
                                                         <action selector="onTapShareButton:" destination="oha-pp-vQJ" eventType="touchUpInside" id="jMa-Hn-ota"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="graphy.young" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVS-wU-rDv">
-                                                    <rect key="frame" x="16" y="391" width="88" height="16"/>
+                                                    <rect key="frame" x="16" y="391.5" width="88" height="16"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comment goes here and should be top left aligned" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0w-Uk-bIZ">
-                                                    <rect key="frame" x="112" y="391" width="237" height="31.5"/>
+                                                    <rect key="frame" x="112" y="391.5" width="237" height="31.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="6lc-MX-815"/>
                                                     </constraints>
@@ -481,7 +474,7 @@
                                             <outlet property="userCommentLabel" destination="sVS-wU-rDv" id="uLq-MO-ukU"/>
                                             <outlet property="userImageView" destination="bla-B0-Fia" id="Li7-78-joo"/>
                                             <outlet property="userLabel" destination="Vbs-5i-gEV" id="vZy-ok-2dM"/>
-                                            <segue destination="1p6-y9-z5b" kind="show" id="WAM-Cl-gy4"/>
+                                            <segue destination="1p6-y9-z5b" kind="show" identifier="ShowPostDetailsSegue" id="WAM-Cl-gy4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

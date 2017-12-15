@@ -134,9 +134,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             if let indexPath = tableView.indexPath(for: cell) {
                 let post = posts[indexPath.row]
-                let targetController = segue.destination as! PostDetailsViewController
-                targetController.post = post
-                targetController.postImageView.image = cell.postImageView.image
+                let destinationVC = segue.destination as! PostDetailsViewController
+                destinationVC.post = post
+                print("before segue \(post)")
+//                destinationVC.postImageView.image = cell.postImageView.image
             }
         }
         

@@ -35,6 +35,8 @@ class PostDetailsViewController: UIViewController {
         let likeCount = post?["likesCount"] ?? 0
         likeCountLabel.text = "\(likeCount) likes"
         
+        print("timestamp \(post?["_created_at"])")
+        
         timestampLabel.text = post?["_created_at"] as? String
         
         if let postImage = post?["media"] as? PFFile {
