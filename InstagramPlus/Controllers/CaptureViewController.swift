@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  CaptureViewController.swift
 //  InstagramPlus
 //
 //  Created by Sean Nam on 12/14/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class CaptureViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

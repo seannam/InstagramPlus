@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Parse
 
-class HomeViewController: UIViewController {
+class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,20 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func onTapLogoutButton(_ sender: Any) {
+        print("logging out")
+        self.logout()
+        segueToLogin()
+    }
+    
+    func logout() {
+        PFUser.logOutInBackground()
+    }
+    
+    func segueToLogin() {
+        self.performSegue(withIdentifier: "LogoutSegue", sender: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
