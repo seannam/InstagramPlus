@@ -35,9 +35,12 @@ class PostDetailsViewController: UIViewController {
         let likeCount = post?["likesCount"] ?? 0
         likeCountLabel.text = "\(likeCount) likes"
         
-        print("timestamp \(post?["_created_at"])")
-        
-        timestampLabel.text = post?["_created_at"] as? String
+        let date = post?["timestamp"] as? Date
+        if date != nil {
+            timestampLabel.text = date?.toString(dateFormat: "MM-dd-yyy hh:mm")
+        } else {
+            timestampLabel.text = "No date info"
+        }
         
         if let postImage = post?["media"] as? PFFile {
             postImage.getDataInBackground(block: { (imageData: Data?, error: Error?) in
@@ -76,4 +79,14 @@ class PostDetailsViewController: UIViewController {
     }
     */
 
+}
+extension Date
+{
+    func toString( dateFormat format  : String ) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
+    }
+    
 }
