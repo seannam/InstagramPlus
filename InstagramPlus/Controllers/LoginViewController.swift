@@ -60,6 +60,7 @@ class LoginViewController: UIViewController {
         let ready = checkEmptySignUpFields()
         if ready {
             loginUser(username: usernameTextField.text!, password: passwordTextField.text!)
+            segueToMain()
         } else {
             print("login error")
         }
@@ -70,6 +71,7 @@ class LoginViewController: UIViewController {
         let ready = checkEmptySignUpFields()
         if ready {
             registerUser(username: usernameTextField.text!, password: passwordTextField.text!)
+            segueToMain()
         } else {
             print("error on sign up")
         }
@@ -85,6 +87,9 @@ class LoginViewController: UIViewController {
         }
     }
     
+    func segueToMain() {
+        self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+    }
     
 
     /*

@@ -87,11 +87,36 @@
                         <outlet property="logoLabel" destination="rao-gL-BsK" id="IhU-Fw-H5l"/>
                         <outlet property="passwordTextField" destination="wZz-6M-qIk" id="9oc-9C-EK9"/>
                         <outlet property="usernameTextField" destination="Jmf-6I-eeA" id="zZ4-UA-cdm"/>
+                        <segue destination="Jh6-5K-jw7" kind="show" identifier="LoginSegue" id="Nn3-32-M6q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="45.600000000000001" y="38.23088455772114"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="E5G-3o-hV8">
+            <objects>
+                <viewController id="Jh6-5K-jw7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nek-sV-HV4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="logged in!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xh4-lk-lyG">
+                                <rect key="frame" x="149" y="291" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="YEX-c7-Eli"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HOg-ac-nvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="38"/>
         </scene>
     </scenes>
 </document>
