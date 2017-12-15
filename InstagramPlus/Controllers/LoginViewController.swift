@@ -80,10 +80,8 @@ class LoginViewController: UIViewController {
     
     func checkEmptySignUpFields() -> Bool {
         if !(usernameTextField.text?.isEmpty)! && !(passwordTextField.text?.isEmpty)! {
-            print("no empty fields")
             return true
         } else {
-            print("empty fields")
             return false
         }
     }

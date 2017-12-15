@@ -11,8 +11,8 @@ The following **required** functionality is completed:
 - [x] User can sign up to create a new account using Parse authentication (+1pt)
 - [x] User can log in and log out of his or her account (+1pt)
 - [x] The current signed in user is persisted across app restarts (+1pt)
-- [ ] User can take a photo, add a caption, and post it to "Instagram" (+2pt)
-- [ ] User can view the last 20 posts submitted to "Instagram" (+2pt)
+- [x] User can take a photo, add a caption, and post it to "Instagram" (+2pt)
+- [x] User can view the last 20 posts submitted to "Instagram" (+2pt)
 - [ ] User can pull to refresh the last 20 posts submitted to "Instagram" (+1pt)
 - [ ] User can tap a post to view post details, including timestamp and caption (+2pt)
 
@@ -37,7 +37,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [ ] Alerts with error message on user sign up, log in, or log out
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 

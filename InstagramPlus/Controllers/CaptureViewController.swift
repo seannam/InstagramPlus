@@ -14,13 +14,21 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var captureImageView: UIImageView!
     @IBOutlet weak var shareBarButtonItem: UIBarButtonItem!
     
+    @IBOutlet weak var addButton: UIButton!
     
     var resizedImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.toggleUIElements()
+        showImagePicker()
+        
+    }
+    @IBAction func onTapAddButton(_ sender: Any) {
+        showImagePicker()
+    }
+    
+    func showImagePicker() {
+        self.hideUIElements()
         
         let vc = UIImagePickerController()
         vc.delegate = self
@@ -34,10 +42,15 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         self.present(vc, animated: true, completion: nil)
     }
-
-    func toggleUIElements() {
-        captionTextView.isHidden = !captionTextView.isHidden
-        captureImageView.isHidden = !captureImageView.isHidden
+    
+    func hideUIElements() {
+        captionTextView.isHidden = true
+        captureImageView.isHidden = true
+    }
+    
+    func showUIElements() {
+        captionTextView.isHidden = false
+        captureImageView.isHidden = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,11 +59,9 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-//        let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
         
         self.captureImageView.image = editedImage
-        self.toggleUIElements()
         
         let size = editedImage.size
         let smallerWidth = size.width * 0.7
@@ -61,9 +72,18 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
         smallerSize.height = smallerHeight
         self.resizedImage = resize(image: editedImage, newSize: smallerSize)
         
+        if resizedImage != nil {
+            showUIElements()
+        }
+        
         dismiss(animated: true, completion: nil)
     }
 
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+        self.captionTextView.isHidden = true
+    }
+    
     func resize(image: UIImage, newSize: CGSize) -> UIImage {
         let resizeImageView = UIImageView(frame: CGRect(0, 0, newSize.width, newSize.height))
         resizeImageView.contentMode = UIViewContentMode.scaleAspectFill
@@ -81,12 +101,10 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         Post.postUserImage(image: resizedImage, withCaption: caption) { (success: Bool, error: Error?) in
             if success {
-                print("[DEBUG] tabBarController.selectedIndex = \(self.tabBarController?.selectedIndex)")
                 print("successfully posted image with caption \(caption) as caption")
-                self.toggleUIElements()
+                self.hideUIElements()
                 self.captureImageView.image = nil
                 self.captionTextView.text = ""
-                self.shareBarButtonItem.title = ""
                 
                 self.navigationController?.navigationItem.hidesBackButton = true
                 self.tabBarController?.selectedIndex = 0
