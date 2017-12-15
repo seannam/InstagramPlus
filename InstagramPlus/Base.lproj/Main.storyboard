@@ -94,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="45.600000000000001" y="38.23088455772114"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="E5G-3o-hV8">
             <objects>
-                <viewController id="Jh6-5K-jw7" customClass="HomeViewController" customModule="InstagramPlus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" title="Home" id="Jh6-5K-jw7" customClass="HomeViewController" customModule="InstagramPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nek-sV-HV4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,9 +113,6 @@
                                 <rect key="frame" x="165" y="553" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="logout"/>
-                                <connections>
-                                    <action selector="onTapLogoutButton:" destination="Jh6-5K-jw7" eventType="touchUpInside" id="D9D-G8-tLq"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
