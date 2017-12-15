@@ -7,5 +7,6 @@ target 'InstagramPlus' do
 
   # Pods for InstagramPlus
   pod 'Parse'
+  pod 'RSKPlaceholderTextView'
 
 end

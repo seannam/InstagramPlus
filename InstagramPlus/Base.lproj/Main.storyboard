@@ -87,7 +87,7 @@
                         <outlet property="logoLabel" destination="rao-gL-BsK" id="IhU-Fw-H5l"/>
                         <outlet property="passwordTextField" destination="wZz-6M-qIk" id="9oc-9C-EK9"/>
                         <outlet property="usernameTextField" destination="Jmf-6I-eeA" id="zZ4-UA-cdm"/>
-                        <segue destination="ZeZ-IC-zkJ" kind="show" identifier="LoginSegue" id="4Np-9Y-uIN"/>
+                        <segue destination="ZeZ-IC-zkJ" kind="presentation" identifier="LoginSegue" id="4Np-9Y-uIN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -124,12 +124,12 @@
                     <tabBarItem key="tabBarItem" title="Profile" image="profile_tab" id="Te3-bw-RDQ"/>
                     <navigationItem key="navigationItem" id="CUc-27-5w4"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="LogoutSegue" id="vbI-zb-HLh"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="LogoutSegue" id="vbI-zb-HLh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOg-ac-nvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-446" y="-147"/>
+            <point key="canvasLocation" x="1271" y="-203"/>
         </scene>
         <!--Capture-->
         <scene sceneID="qqn-Ra-SPD">
@@ -138,14 +138,78 @@
                     <view key="view" contentMode="scaleToFill" id="wqs-35-r79">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="lnp-do-9M1">
+                                <rect key="frame" x="16" y="60" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="GeC-xP-vnc"/>
+                                    <constraint firstAttribute="height" constant="75" id="sMP-Xa-CCI"/>
+                                </constraints>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkC-Dt-ykL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="New Post" id="oKV-gv-5Cz">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="34f-B5-MPG">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EFR-C0-poP">
+                                                <rect key="frame" x="319" y="7" width="40" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Share"/>
+                                                <connections>
+                                                    <action selector="onTapShareBarButton:" destination="sSN-k9-LQL" eventType="touchUpInside" id="fTa-I1-fG3"/>
+                                                </connections>
+                                            </button>
+                                            <connections>
+                                                <action selector="onTapShareBarButton:" destination="sSN-k9-LQL" id="OcS-6t-CSJ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" showsHorizontalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="paR-8k-obA" customClass="RSKPlaceholderTextView" customModule="RSKPlaceholderTextView">
+                                <rect key="frame" x="99" y="60" width="260" height="75"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Phw-BY-Gt3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Write a caption..."/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="paR-8k-obA" firstAttribute="top" secondItem="KkC-Dt-ykL" secondAttribute="bottom" constant="16" id="0bn-mI-Y5X"/>
+                            <constraint firstItem="KkC-Dt-ykL" firstAttribute="trailing" secondItem="0Z1-Z1-Jf0" secondAttribute="trailing" id="51I-F3-Qwl"/>
+                            <constraint firstItem="KkC-Dt-ykL" firstAttribute="top" secondItem="wqs-35-r79" secondAttribute="top" id="Ahb-1l-jT3"/>
+                            <constraint firstItem="0Z1-Z1-Jf0" firstAttribute="trailing" secondItem="paR-8k-obA" secondAttribute="trailing" constant="16" id="OQS-aV-sDe"/>
+                            <constraint firstItem="lnp-do-9M1" firstAttribute="leading" secondItem="0Z1-Z1-Jf0" secondAttribute="leading" constant="16" id="aid-xw-yjR"/>
+                            <constraint firstItem="KkC-Dt-ykL" firstAttribute="leading" secondItem="0Z1-Z1-Jf0" secondAttribute="leading" id="ipj-k5-Z22"/>
+                            <constraint firstItem="paR-8k-obA" firstAttribute="leading" secondItem="lnp-do-9M1" secondAttribute="trailing" constant="8" id="o3f-X9-kuk"/>
+                            <constraint firstItem="lnp-do-9M1" firstAttribute="top" secondItem="KkC-Dt-ykL" secondAttribute="bottom" constant="16" id="tRY-cV-ymm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0Z1-Z1-Jf0"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="New Post" image="insta_camera_btn" id="Yj7-1G-ZO1"/>
+                    <tabBarItem key="tabBarItem" title="New Post" image="insta_camera_btn" id="UT9-aP-q66"/>
+                    <navigationItem key="navigationItem" id="ZXN-FV-wzp">
+                        <barButtonItem key="rightBarButtonItem" id="M3r-R1-D5x">
+                            <connections>
+                                <action selector="onTapShareBarButton:" destination="sSN-k9-LQL" id="spC-BR-dSY"/>
+                                <segue destination="mEa-Ni-AYa" kind="show" identifier="ShareToHomeSegue" id="HtY-Cw-t1k"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="captionTextView" destination="paR-8k-obA" id="9ez-O1-jxF"/>
+                        <outlet property="captureImageView" destination="lnp-do-9M1" id="Qk7-Fe-0xz"/>
+                        <outlet property="shareBarButtonItem" destination="34f-B5-MPG" id="ROL-Nr-XFf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rft-Wq-Q3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1279" y="675"/>
+            <point key="canvasLocation" x="1904.8" y="1468.5157421289357"/>
         </scene>
         <!--Home-->
         <scene sceneID="lBD-s6-tZ6">
@@ -184,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRe-9s-dcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1480.8" y="-29.23538230884558"/>
+            <point key="canvasLocation" x="1270" y="616"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="PVv-mX-KrU">
@@ -197,13 +261,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="mEa-Ni-AYa" kind="relationship" relationship="viewControllers" id="meb-0k-dY1"/>
-                        <segue destination="sSN-k9-LQL" kind="relationship" relationship="viewControllers" id="lDp-xg-JEs"/>
+                        <segue destination="sSN-k9-LQL" kind="relationship" relationship="viewControllers" id="D9x-iY-4iC"/>
                         <segue destination="Jh6-5K-jw7" kind="relationship" relationship="viewControllers" id="r3v-Iq-wS1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTw-Z2-UaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="330" y="614"/>
+            <point key="canvasLocation" x="31" y="655"/>
         </scene>
     </scenes>
     <resources>
@@ -211,4 +275,7 @@
         <image name="insta_camera_btn" width="25" height="25"/>
         <image name="profile_tab" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HtY-Cw-t1k"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -2,14 +2,17 @@ PODS:
   - Bolts/Tasks (1.8.4)
   - Parse (1.15.3):
     - Bolts/Tasks (~> 1.8)
+  - RSKPlaceholderTextView (3.0.0)
 
 DEPENDENCIES:
   - Parse
+  - RSKPlaceholderTextView
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   Parse: cdc0f1f975ee8be0409e66f21b05df4ae067047c
+  RSKPlaceholderTextView: 0ce73a19998e236323b3f1f16bf4a4e4a76c2c28
 
-PODFILE CHECKSUM: 634c1c987950a9f8246f84f0d9b9a9152fbe2897
+PODFILE CHECKSUM: a684f251be0fca2fe549c694faecf1442c03312d
 
 COCOAPODS: 1.3.1
