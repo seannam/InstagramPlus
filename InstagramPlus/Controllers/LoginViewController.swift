@@ -18,8 +18,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+
+        // hide navbar (for after logging out)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func didReceiveMemoryWarning() {
