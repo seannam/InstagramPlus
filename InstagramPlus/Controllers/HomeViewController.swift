@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func onTapLogoutButton(_ sender: Any) {
+        print("logging out")
         self.logout()
         segueToLogin()
     }
